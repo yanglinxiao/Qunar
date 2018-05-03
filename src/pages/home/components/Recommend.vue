@@ -2,11 +2,11 @@
   <div class="wrapper">
     <p class="category">热销推荐</p>
     <ul class="recommend-list">
-      <li class="recommend border-bottom">
-        <img class="recommend-img" src="http://img1.qunarzz.com/sight/p0/1602/b2/b2af115356f50f6590.img.jpg_200x200_d3daf0af.jpg" alt="">
+      <li class="recommend border-bottom" v-for="item of list" :key="item.id">
+        <img class="recommend-img" :src="item.imgUrl" alt="recommend-photo">
         <div class="recommend-info">
-          <p class="title">岭南印象园</p>
-          <p class="desc">很好玩很好玩很好玩很好玩</p>
+          <p class="title">{{item.title}}</p>
+          <p class="desc">{{item.desc}}</p>
           <p class="check-detail">查看详情</p>
         </div>
       </li>
@@ -15,9 +15,12 @@
 </template>
 
 <script>
-    export default {
-        name: "HomeRecommend"
-    }
+export default {
+  name: "HomeRecommend",
+  props: {
+    list: Array
+  }
+}
 </script>
 
 <style lang="stylus" scoped>

@@ -2,29 +2,22 @@
   <div class="wrapper">
     <p class="category">周末去哪儿</p>
     <ul class="weekend-list">
-      <li class="weekend border-bottom">
-        <img src="http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg" alt="">
-        <p class="title">广州必游TOP10</p>
-        <p class="desc">感受现代与传统相融合的广州</p>
-      </li>
-      <li class="weekend border-bottom">
-        <img src="http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg" alt="">
-        <p class="title">广州必游TOP10</p>
-        <p class="desc">感受现代与传统相融合的广州</p>
-      </li>
-      <li class="weekend border-bottom">
-        <img src="http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg" alt="">
-        <p class="title">广州必游TOP10</p>
-        <p class="desc">感受现代与传统相融合的广州</p>
+      <li class="weekend border-bottom" v-for="item of list" :key="item.id">
+        <img :src="item.imgUrl" alt="weekend-photo">
+        <p class="title">{{item.title}}</p>
+        <p class="desc">{{item.desc}}</p>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "HomeWeekend"
+export default {
+    name: "HomeWeekend",
+    props: {
+      list: Array
     }
+}
 </script>
 
 <style lang="stylus" scoped>
