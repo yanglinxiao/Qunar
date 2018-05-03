@@ -21,27 +21,27 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import "~@/styles/variable.styl";
+  @import "~@/styles/variable.styl"
   .header
-    height : .86rem;
-    display : flex;
-    align-items center;
-    background-color : $themeBgColor;
-    color: $themeFontColor;
+    height .86rem
+    display flex
+    align-items center
+    background-color $themeBgColor
+    color $themeFontColor
     .header-left
-      margin-left : .1rem;
+      margin-left .1rem
     .header-input
-      flex : 1;
-      background-color #ffffff;
-      height : .64rem;
-      line-height : .64rem;
-      border-radius : .1rem;
-      margin : 0 .1rem;
-      padding-left: .2rem;
-      color : #ccc;
+      flex 1
+      background-color #ffffff
+      height .64rem
+      line-height .64rem
+      border-radius .1rem
+      margin 0 .1rem
+      padding-left.2rem
+      color #ccc
     .header-right
-      margin-right : .1rem;
+      margin-right .1rem
       .icon-down
-        position : relative;
-        top: 1px;
+        position relative
+        top 1px
 </style>

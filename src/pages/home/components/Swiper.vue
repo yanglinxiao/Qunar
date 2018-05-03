@@ -40,13 +40,13 @@
 
 <style lang="stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active
-    background-color : #ffffff;
+    background-color #ffffff
   .wrapper
-    width : 100%;
-    height : 0;
-    overflow : hidden;
-    padding-bottom : 31.25%;
-    background-color : #eee;
+    width 100%
+    height 0
+    overflow hidden
+    padding-bottom 31.25%
+    background-color #eee
     .swiper-img
-      width : 100%;
+      width 100%
 </style>
