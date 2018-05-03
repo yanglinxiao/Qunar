@@ -7,7 +7,7 @@
           <p class="icon-desc">{{item.iconDesc}}</p>
         </div>
       </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
+      <!--<div class="swiper-pagination" slot="pagination"></div>-->
     </swiper>
   </div>
 </template>
@@ -17,9 +17,7 @@
         name: "HomeIcons",
         data(){
           return {
-            swiperOption: {
-              pagination: '.swiper-pagination'
-            },
+            swiperOption: {},
             iconList: [
               {
                 id: 1,
@@ -87,8 +85,6 @@
 
 <style lang="stylus" scoped>
   @import "~@/styles/mixins.styl"
-  .icons >>> .swiper-container-horizontal > .swiper-pagination-bullets
-    bottom 1px
   .icons
     height 50vw
     overflow hidden
@@ -102,7 +98,7 @@
       align-items center
       justify-content center
       .icon-img
-        width 50%
+        width 60%
       .icon-desc
         ellipsis();
 </style>
