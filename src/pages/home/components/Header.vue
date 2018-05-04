@@ -7,10 +7,12 @@
       <i class="iconfont icon-search"></i>
       <span>输入目的地/景点</span>
     </div>
-    <div class="header-right">
-      <span>城市</span>
-      <i class="iconfont icon-down"></i>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        <span>城市</span>
+        <i class="iconfont icon-down"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -41,6 +43,7 @@ export default {
       color #ccc
     .header-right
       margin-right .1rem
+      color $themeFontColor
       .icon-down
         position relative
         top 1px
