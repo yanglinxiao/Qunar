@@ -25,7 +25,7 @@ export default {
 <style lang="stylus" scoped>
   @import "~@/styles/variable.styl"
   .header
-    height .86rem
+    height $headerHeight
     display flex
     align-items center
     background-color $themeBgColor
