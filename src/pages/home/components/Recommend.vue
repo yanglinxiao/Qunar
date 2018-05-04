@@ -27,10 +27,7 @@ export default {
   @import "~@/styles/mixins.styl"
   .wrapper
     .category
-      line-height .8rem
-      background-color #eee
-      padding-left .2rem
-      font-size .3rem
+      category(.8rem)
     .recommend-list
       .recommend
         display flex
