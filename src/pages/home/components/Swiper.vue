@@ -11,23 +11,23 @@
 
 <script>
 export default {
-    name: "HomeSwiper",
-    props: {
-        list: Array
-    },
-    data() {
-      return {
-        swiperOption: {
-          autoplay: 3000,
-          pagination: '.swiper-pagination',
-          loop: true
-        },
+  name: "HomeSwiper",
+  props: {
+    list: Array
+  },
+  data() {
+    return {
+      swiperOption: {
+        autoplay: 3000,
+        pagination: '.swiper-pagination',
+        loop: true
       }
-    },
+    }
+  },
   computed: {
-      showSwiper(){
-        return this.list.length;
-      }
+    showSwiper() {
+      return this.list.length
+    }
   }
 }
 </script>

@@ -14,19 +14,19 @@
 
 <script>
 export default {
-    name: "HomeIcons",
-    props: {
-        list: Array
-    },
-    data() {
-      return {
-        swiperOption: {}
-      }
-    },
+  name: "HomeIcons",
+  props: {
+    list: Array
+  },
+  data() {
+    return {
+      swiperOption: {}
+    }
+  },
   computed: {
-    pages(){
+    pages() {
       const pages = []
-      this.list.forEach((item,index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -35,7 +35,7 @@ export default {
       })
       return pages
     }
-}
+  }
 }
 </script>
 
