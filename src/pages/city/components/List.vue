@@ -8,32 +8,13 @@
       <div class="area">
         <p class="category">热门城市</p>
         <ul class="hot-city-list">
-          <li class="city">北京</li>
-          <li class="city">上海</li>
-          <li class="city">深圳</li>
-          <li class="city">广州</li>
-          <li class="city">杭州</li>
-          <li class="city">成都</li>
+          <li class="city" v-for="item of hotCityList" :key="item.id">{{item.name}}</li>
         </ul>
       </div>
-      <div class="area">
-        <p class="category">A</p>
+      <div class="area" v-for="(value,key) of cityList" :key="key">
+        <p class="category">{{key}}</p>
         <ul class="letter-city-list">
-          <li class="letter-city border-bottom">北京</li>
-          <li class="letter-city border-bottom">上海</li>
-          <li class="letter-city border-bottom">深圳</li>
-          <li class="letter-city border-bottom">广州</li>
-          <li class="letter-city border-bottom">杭州</li>
-          <li class="letter-city border-bottom">成都</li>
-        </ul>
-        <p class="category">B</p>
-        <ul class="letter-city-list">
-          <li class="letter-city border-bottom">北京</li>
-          <li class="letter-city border-bottom">上海</li>
-          <li class="letter-city border-bottom">深圳</li>
-          <li class="letter-city border-bottom">广州</li>
-          <li class="letter-city border-bottom">杭州</li>
-          <li class="letter-city border-bottom">成都</li>
+          <li class="letter-city border-bottom" v-for="item of value" :key="item.id">{{item.name}}</li>
         </ul>
       </div>
     </div>
@@ -44,6 +25,10 @@
   import BScroll from 'better-scroll'
   export default {
     name: "CityList",
+    props: {
+      cityList: Object,
+      hotCityList: Array
+    },
     mounted() {
       this.scroll = new BScroll(this.$refs.wrapper);
     }
