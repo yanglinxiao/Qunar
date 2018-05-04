@@ -1,7 +1,9 @@
 <template>
   <div class="city-header">
-     <i class="iconfont icon-left"></i>
-     <span class="title">城市选择</span>
+    <router-link to="/">
+      <i class="iconfont icon-left"></i>
+    </router-link>
+    <span class="title">城市选择</span>
   </div>
 </template>
 
@@ -23,6 +25,7 @@
       position absolute
       top 0
       left .1rem
+      color $themeFontColor
     .title
       font-size .32rem
 </style>
