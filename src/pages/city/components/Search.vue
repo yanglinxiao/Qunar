@@ -21,36 +21,31 @@
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
-  export default {
-    name: "CitySearch",
-    props: {
-      searchResult: Array
-    },
-    data() {
-      return {
-        keyword: '',
-        result: this.searchResult
-      }
-    },
-    computed: {
-      hasNoSearchResult () {
-        return !this.result.length
-      }
-    },
-    watch: {
-      keyword (newValue) {
-        if (newValue) {
-          this.$emit('search',newValue)
-        }else {
-          this.result = [];
-        }
-      }
-    },
-    mounted () {
-      this.scroll = new BScroll(this.$refs.search)
+import BScroll from 'better-scroll'
+export default {
+  name: "CitySearch",
+  props: {
+    searchResult: Array
+  },
+  data() {
+    return {
+      keyword: ''
     }
+  },
+  computed: {
+    hasNoSearchResult () {
+      return !this.searchResult.length
+    }
+  },
+  watch: {
+    keyword (newValue) {
+      this.$emit('search', newValue)
+    }
+  },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.search)
   }
+}
 </script>
 
 <style lang="stylus" scoped>

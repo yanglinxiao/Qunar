@@ -26,25 +26,25 @@
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
-  export default {
-    name: "CityList",
-    props: {
-      cityList: Object,
-      hotCityList: Array,
-      letter: String
-    },
-    mounted() {
-      this.scroll = new BScroll(this.$refs.wrapper);
-    },
-    watch: {
-      letter(newValue) {
-        if(newValue){
-          this.scroll.scrollToElement(this.$refs[newValue][0]);
-        }
+import BScroll from 'better-scroll'
+export default {
+  name: "CityList",
+  props: {
+    cityList: Object,
+    hotCityList: Array,
+    letter: String
+  },
+  mounted () {
+    this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter (newValue) {
+      if (newValue) {
+        this.scroll.scrollToElement(this.$refs[newValue][0])
       }
     }
   }
+}
 </script>
 
 <style lang="stylus" scoped>
