@@ -11,18 +11,22 @@
         <span class="banner-count">39</span>
       </div>
     </div>
-    <common-gallery :imgList="bannerList"
-                    v-show="showGallery"
-                    @close="handleGalleryClose"></common-gallery>
+    <fade>
+      <common-gallery :imgList="bannerList"
+                      v-show="showGallery"
+                      @close="handleGalleryClose"></common-gallery>
+    </fade>
   </div>
 </template>
 
 <script>
 import CommonGallery from 'commons/gallery/Gallery'
+import Fade from 'commons/fade/Fade'
 export default {
   name: "DetailBanner",
   components: {
-    CommonGallery
+    CommonGallery,
+    Fade
   },
   data () {
     return {
