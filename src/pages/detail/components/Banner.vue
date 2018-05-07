@@ -11,14 +11,23 @@
         <span class="banner-count">{{this.galleryImgs.length}}</span>
       </div>
     </div>
+<<<<<<< HEAD
     <common-gallery :imgList="galleryImgs"
                     v-show="showGallery"
                     @close="handleGalleryClose"></common-gallery>
+=======
+    <fade>
+      <common-gallery :imgList="bannerList"
+                      v-show="showGallery"
+                      @close="handleGalleryClose"></common-gallery>
+    </fade>
+>>>>>>> origin/gallery-animation
   </div>
 </template>
 
 <script>
 import CommonGallery from 'commons/gallery/Gallery'
+import Fade from 'commons/fade/Fade'
 export default {
   name: "DetailBanner",
   props: {
@@ -42,7 +51,8 @@ export default {
     }
   },
   components: {
-    CommonGallery
+    CommonGallery,
+    Fade
   },
   data () {
     return {
