@@ -11,17 +11,12 @@
         <span class="banner-count">{{this.galleryImgs.length}}</span>
       </div>
     </div>
-<<<<<<< HEAD
-    <common-gallery :imgList="galleryImgs"
-                    v-show="showGallery"
-                    @close="handleGalleryClose"></common-gallery>
-=======
+
     <fade>
-      <common-gallery :imgList="bannerList"
+      <common-gallery :imgList="galleryImgs"
                       v-show="showGallery"
                       @close="handleGalleryClose"></common-gallery>
     </fade>
->>>>>>> origin/gallery-animation
   </div>
 </template>
 
