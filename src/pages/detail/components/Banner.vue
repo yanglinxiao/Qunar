@@ -1,17 +1,17 @@
 <template>
   <div class="detail-banner">
     <img class="banner-img"
-         :src="bannerList[0].url"
+         :src="bannerImg"
          @click="handleBannerClick"
          alt="banner">
     <div class="banner-info">
-      <span class="left">岭南印象园门票</span>
+      <span class="left">{{this.sightName}}</span>
       <div class="right">
         <i class="iconfont icon-search"></i>
-        <span class="banner-count">39</span>
+        <span class="banner-count">{{this.galleryImgs.length}}</span>
       </div>
     </div>
-    <common-gallery :imgList="bannerList"
+    <common-gallery :imgList="galleryImgs"
                     v-show="showGallery"
                     @close="handleGalleryClose"></common-gallery>
   </div>
@@ -21,22 +21,32 @@
 import CommonGallery from 'commons/gallery/Gallery'
 export default {
   name: "DetailBanner",
+  props: {
+    sightName: {
+      type: String,
+      default () {
+        return ''
+      }
+    },
+    bannerImg: {
+      type: String,
+      default () {
+        return ''
+      }
+    },
+    galleryImgs: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
+  },
   components: {
     CommonGallery
   },
   data () {
     return {
-      showGallery: false,
-      bannerList: [
-        {
-          id: 1,
-          url: 'http://img1.qunarzz.com/sight/p0/1802/af/afd475218580d73ca3.img.jpg_r_800x800_8c2da002.jpg'
-        },
-        {
-          id: 2,
-          url: 'http://img1.qunarzz.com/sight/p0/1802/89/8954b2fa3daf91d3a3.img.jpg_r_800x800_d4d01624.jpg'
-        }
-      ]
+      showGallery: false
     }
   },
   methods: {

@@ -2,13 +2,13 @@
   <div class="gallery" @click="handleGalleryClick">
     <div class="wrapper">
       <swiper :options="swiperOption">
-        <swiper-slide v-for="item of imgList" :key="item.id">
+        <swiper-slide v-for="(item, index) of imgList" :key="index">
           <img
             class="gallery-img"
-            :src="item.url"
+            :src="item"
             alt="gallery">
         </swiper-slide>
-        <div class="swiper-pagination"  slot="pagination"></div>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -64,6 +64,6 @@ export default {
         width 100%
         transform translateY(calc((100vw - 100%) / 2))
       .swiper-pagination
-        bottom -3rem
+        bottom -2rem
         color #ffffff
 </style>
