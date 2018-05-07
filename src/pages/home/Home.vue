@@ -67,6 +67,7 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+  .home
+    overflow-x hidden
 </style>
