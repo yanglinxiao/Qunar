@@ -4,7 +4,7 @@
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" alt="banner">
       </swiper-slide>
-      <div class="swiper-pagination"  slot="pagination"></div>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   props: {
     list: Array
   },
-  data() {
+  data () {
     return {
       swiperOption: {
         autoplay: 3000,
@@ -25,7 +25,7 @@ export default {
     }
   },
   computed: {
-    showSwiper() {
+    showSwiper () {
       return this.list.length
     }
   }

@@ -18,7 +18,7 @@ export default {
   props: {
     cityList: Object
   },
-  data() {
+  data () {
     return {
       letters: [],
       headerSearchHeight: '',
@@ -28,13 +28,13 @@ export default {
     }
   },
   methods: {
-    handleClick(e) {
+    handleClick (e) {
       this.$emit('change', e.target.innerText)
     },
-    handleTouchStart() {
+    handleTouchStart () {
       this.status = true
     },
-    handleTouchMove(e) {
+    handleTouchMove (e) {
       if (this.status) {
         if (this.timer) {
           clearTimeout(this.timer)
@@ -48,10 +48,10 @@ export default {
         }, 100)
       }
     },
-    handleTouchEnd() {
+    handleTouchEnd () {
       this.status = false
     },
-    splitPx(data) {
+    splitPx (data) {
       return data.substring(0, data.indexOf('px'))
     }
   },

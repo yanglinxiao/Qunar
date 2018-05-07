@@ -2,7 +2,10 @@
   <div class="wrapper">
     <p class="category">热销推荐</p>
     <ul class="recommend-list">
-      <li class="recommend border-bottom" v-for="item of list" :key="item.id">
+      <li class="recommend border-bottom"
+          v-for="item of list"
+          :key="item.id"
+          @click="handleClick(item.id)">
         <img class="recommend-img" :src="item.imgUrl" alt="recommend-photo">
         <div class="recommend-info">
           <p class="title">{{item.title}}</p>
@@ -19,6 +22,11 @@ export default {
   name: "HomeRecommend",
   props: {
     list: Array
+  },
+  methods: {
+    handleClick (id) {
+      this.$router.push(`/detail/${id}`)
+    }
   }
 }
 </script>

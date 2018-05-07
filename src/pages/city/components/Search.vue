@@ -29,7 +29,7 @@ export default {
   props: {
     searchResult: Array
   },
-  data() {
+  data () {
     return {
       keyword: ''
     }

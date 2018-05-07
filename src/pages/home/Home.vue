@@ -25,7 +25,7 @@ export default {
     HomeRecommend,
     HomeWeekend
   },
-  data() {
+  data () {
     return {
       swiperList: [],
       iconList: [],
@@ -37,14 +37,14 @@ export default {
     ...mapState(['city'])
   },
   methods: {
-    getHomeInfo() {
+    getHomeInfo () {
       axios.get('/api/index.json', {
         params: {
           city: this.city
         }
       }).then(this.getHomeInfoSuccess)
     },
-    getHomeInfoSuccess(res) {
+    getHomeInfoSuccess (res) {
       if (res.status === 200 && res.data.status) {
         const {data} = res.data
         this.swiperList = data.swiperList
@@ -54,11 +54,11 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  activated() {
+  activated () {
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()
